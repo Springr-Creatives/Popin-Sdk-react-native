@@ -1,9 +1,8 @@
-Here’s an example README with instructions for setting up and using your `react-native-popin-call` library, including permission setup for iOS and Android.
+A React Native library to enable video calls in your app using WebView.
 
-```markdown
-# react-native-popin-call
+## Note
 
-A React Native library to enable video calls in your app using WebView. Users can initialize the SDK by passing in `token`, `name`, and `mobile` parameters.
+ Users can initialize the SDK by passing in `token`, `name`, and `mobile` parameters.
 
 Name and mobile parameters are for identifying customers and token will be available in your popin dashboard.
 
@@ -78,6 +77,4 @@ The `VideoCallWebView` component will check and request permissions when initial
 ---
 
 With these steps, your `react-native-popin-call` library should be ready for use, allowing for a seamless video call experience within any React Native project.
-```
 
-This README provides clear setup instructions, permission requirements for both iOS and Android, and basic usage for users of the library. Let me know if you’d like additional customization or examples!
