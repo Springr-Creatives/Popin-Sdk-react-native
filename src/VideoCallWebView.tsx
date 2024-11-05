@@ -1,6 +1,6 @@
 // src/VideoCallWebView.tsx
 import React, { useEffect, useMemo, useState } from 'react';
-import { Alert } from 'react-native';
+import { View, Alert, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
@@ -62,18 +62,31 @@ const VideoCallWebView: React.FC<VideoCallWebViewProps> = ({
   }
 
   return (
-    <WebView
-      source={{ uri: url }}
-      onMessage={(event) => {
-        if (onMessage) {
-          onMessage(event.nativeEvent.data);
-        }
-      }}
-      javaScriptEnabled
-      domStorageEnabled
-      mediaPlaybackRequiresUserAction={false}
-    />
+    <View style={styles.container}>
+      <WebView
+        style={styles.webView}
+        source={{ uri: url }}
+        onMessage={(event) => {
+          if (onMessage) {
+            onMessage(event.nativeEvent.data);
+          }
+        }}
+        javaScriptEnabled
+        domStorageEnabled
+        mediaPlaybackRequiresUserAction={false}
+      />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  webView: {
+    width: '100%',
+    height: '100%',
+  },
+});
 
 export default VideoCallWebView;
