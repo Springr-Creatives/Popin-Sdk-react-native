@@ -1,6 +1,6 @@
 // src/VideoCallWebView.tsx
 import React, { useEffect, useMemo, useState } from 'react';
-import { View, Alert, StyleSheet } from 'react-native';
+import { View, Alert, StyleSheet, Text } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
@@ -58,7 +58,7 @@ const VideoCallWebView: React.FC<VideoCallWebViewProps> = ({
   }, []);
 
   if (!hasPermissions) {
-    return null; // Optionally, show a loading indicator or error message here
+    return <Text>Camera and microphone permission required.</Text>;
   }
 
   return (
