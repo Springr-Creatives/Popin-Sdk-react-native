@@ -58,7 +58,11 @@ const VideoCallWebView: React.FC<VideoCallWebViewProps> = ({
   }, []);
 
   if (!hasPermissions) {
-    return <Text>Camera and microphone permission required.</Text>;
+    return (
+      <View style={styles.container}>
+        <Text>Camera and microphone permission required.</Text>
+      </View>
+    );
   }
 
   return (
