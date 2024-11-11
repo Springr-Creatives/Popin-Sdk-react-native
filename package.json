@@ -1,6 +1,6 @@
 {
   "name": "react-native-popin-call",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Popin integration for react native.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -184,7 +184,7 @@
     "version": "0.42.2"
   },
   "dependencies": {
-    "react-native-permissions": "^5.0.2",
+    "react-native-permissions": "^5.1.0",
     "react-native-webview": "^13.12.3"
   }
 }
